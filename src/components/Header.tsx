@@ -90,19 +90,19 @@ export function Header() {
             <div className="grid grid-cols-2">
               <div>
                 <Link
-                  href="/about"
+                  href="#about"
                   className="block text-gray-700 dark:text-foreground-dark hover:text-gray-900"
                 >
                   Sobre Nós
                 </Link>
                 <Link
-                  href="/services"
+                  href="#services"
                   className="block text-gray-700 dark:text-foreground-dark hover:text-gray-900"
                 >
                   Serviços
                 </Link>
                 <Link
-                  href="/contact"
+                  href="#contact"
                   className="block text-gray-700 dark:text-foreground-dark hover:text-gray-900"
                 >
                   Contato

@@ -4,21 +4,21 @@ import { useContext } from "react";
 import { ThemeContext } from "@/context/ThemeContext";
 import Link from "next/link";
 
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, } from "react-icons/fa";
-import { FaCartShopping } from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaCartShopping } from "react-icons/fa6"; // Verifique o ícone de compras, o correto seria 'fa6' se estivesse disponível como mencionado.
 import { CiMail } from "react-icons/ci";
 
 export function Footer() {
   const { theme } = useContext(ThemeContext);
   return (
-    <div className="text-gray-900 bg-white dark:bg-background-dark flex justify-center items-center h-20">
-      <div className="flex space-x-24">
-        <div className="text-xl md:text-2xl font-bold text-teal-400">
+    <footer className="text-gray-900 bg-white dark:bg-background-dark flex justify-center items-center h-20 p-4">
+      <div className="flex flex-col md:flex-row justify-between items-center w-full max-w-screen-xl">
+        <div className="text-xl md:text-2xl font-bold text-teal-400 mb-4 md:mb-0">
           <span>
             <Link href="/">Code House</Link>
           </span>
         </div>
-        <div className="text-gray-800 dark:text-white">
+        <div className="text-center text-gray-800 dark:text-white mb-4 md:mb-0">
           <span>© 2024 Code House. Design & Desenvolvimento de Software.</span>
         </div>
         <div className="flex text-gray-800 dark:text-white space-x-4">
@@ -54,6 +54,6 @@ export function Footer() {
           </span>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

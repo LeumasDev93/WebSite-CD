@@ -11,7 +11,7 @@ import { CiMail } from "react-icons/ci";
 export function Footer() {
   const { theme } = useContext(ThemeContext);
   return (
-    <footer className="text-gray-900 bg-white dark:bg-background-dark flex justify-center items-center h-20 p-4">
+    <footer className="text-gray-900 bg-white dark:bg-background-dark flex justify-center items-center h-auto p-4">
       <div className="flex flex-col md:flex-row justify-between items-center w-full max-w-screen-xl">
         <div className="text-xl md:text-2xl font-bold text-teal-400 mb-4 md:mb-0">
           <span>
@@ -21,7 +21,7 @@ export function Footer() {
         <div className="text-center text-gray-800 dark:text-white mb-4 md:mb-0">
           <span>© 2024 Code House. Design & Desenvolvimento de Software.</span>
         </div>
-        <div className="flex text-gray-800 dark:text-white space-x-4">
+        <div className="flex text-gray-800 dark:text-white space-x-4 mb-4 md:mb-0">
           <span>
             <Link href="#">
               <FaCartShopping />

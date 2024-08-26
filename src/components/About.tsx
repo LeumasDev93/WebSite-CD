@@ -1,9 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import Two from "@/assets/images/about.jpg";
+import TeamImage from "@/assets/images/about.jpg";  // Imagem do lado esquerdo
+import TechImage from "@/assets/images/team.jpg"; // Imagem do lado direito
 import { useContext } from "react";
 import { ThemeContext } from "@/context/ThemeContext";
+import Link from "next/link";
 
 export function About() {
   const { theme } = useContext(ThemeContext);
@@ -11,59 +13,52 @@ export function About() {
   return (
     <section
       id="about"
-      className={`${
-        theme === "dark" ? "bg-gray-800" : "bg-gray-100"
-      } transition-colors duration-300`}
+      className={`${theme === "dark" ? "bg-background-dark" : "bg-gray-100"} transition-colors duration-300 py-20`}
     >
       <div
-        className={`text-gray-900 flex flex-col justify-center items-center mt-20 px-4 mb-10 ${
-          theme === "dark" ? "text-white" : "text-gray-900"
-        }`}
+        className="shadow mx-auto flex flex-col md:flex-row items-center justify-between space-y-10 md:space-y-0 p-10"
       >
-        <div className="flex flex-col md:space-x-20 space-y-10 md:space-y-0 md:flex-row items-center">
-          <div className="px-4 md:px-0">
-            <Image
-              src={Two}
-              alt="About Image"
-              className="w-[500px] h-auto rounded-full"
-            />
-          </div>
-          <div className="mt-20">
-            <div className="mb-4">
-              <h2 className="text-teal-400 font-bold text-sm md:text-xl px-8 md:px-0">
-                QUEM SOMOS NÓS?
-              </h2>
-            </div>
-            <div className="w-96 text-center md:text-left px-4 md:px-0">
-              <h1
-                className={`font-bold text-xl md:text-2xl ${
-                  theme === "dark" ? "text-white" : "text-gray-800"
-                }`}
-              >
-                Somos uma consultoria global especializada em gerenciamento de
-                stakeholders e construção de parcerias no setor de
-                desenvolvimento de software.
-              </h1>
-            </div>
-            <div
-              className={`w-[400px] mt-5 ${
-                theme === "dark" ? "text-gray-300" : "text-gray-400"
-              }`}
-            >
-              <h3 className="px-4 md:px-0">
-                Acesse recursos valiosos instantaneamente para desenvolvimento
-                de software. Implemente soluções seguras, otimize sua eficiência
-                e colabore com outros profissionais para criar sua rede
-                Techwind. Melhore a produtividade e leve seus projetos ao
-                próximo nível com ferramentas inovadoras.
-              </h3>
-            </div>
-            <div className="flex justify-center md:justify-start mt-4 px-4 md:px-0">
-              <button className="bg-teal-500 hover:bg-teal-400 text-white font-bold py-2 px-6 md:px-4 rounded">
-                Saber Mais
-              </button>
-            </div>
-          </div>
+        {/* Imagem esquerda */}
+        <div className="md:w-1/4 flex justify-center">
+          <Image
+            src={TeamImage}
+            alt="Team Collaboration"
+            width={300}
+            height={300}
+            className="rounded-full"
+          />
+        </div>
+        
+        {/* Texto central */}
+        <div className="md:w-1/2 text-center space-y-4">
+          <h2 className="text-blue-900 font-bold text-2xl md:text-3xl">
+            QUEM SOMOS NÓS?
+          </h2>
+          <p className={`text-justify ${theme === "dark" ? "text-white" : "text-gray-800"} text-lg md:text-xl`}>
+            Code House é uma empresa de tecnologia e desenvolvimento de software fundada em 2024 em Cabo Verde.
+            Nossa missão é transformar desafios internos das empresas em oportunidades de crescimento, oferecendo
+            soluções digitais personalizadas que impulsionam o sucesso dos nossos clientes.
+          </p>
+          <p className={`text-justify ${theme === "dark" ? "text-gray-300" : "text-gray-500"} text-sm md:text-base`}>
+            Acesse recursos valiosos instantaneamente para desenvolvimento de software. Implemente soluções seguras,
+            otimize sua eficiência e colabore com outros profissionais para criar sua rede Techwind. Melhore a
+            produtividade e leve seus projetos ao próximo nível com ferramentas inovadoras.
+          </p>
+         
+        </div>
+        
+        {/* Imagem direita */}
+        <div className="md:w-1/5 flex flex-col items-center justify-center">
+          <Image
+            src={TechImage}
+            alt="Technology Solutions"
+            width={300}
+            height={300}
+            className="rounded-full"
+          />
+           <Link href="/about" className="inline-block bg-blue-900 hover:bg-blue-950 text-white font-bold py-2 px-6 rounded w-36 mt-4">
+            Saber Mais
+          </Link>
         </div>
       </div>
     </section>

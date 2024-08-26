@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Service } from "@/components/Service";
 import Image from "next/image";
+import { Contact } from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Banner />
         <About />
         <Service />
+        <Contact />
         <Footer />
         <BackToTopButton />
       </main>

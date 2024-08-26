@@ -13,7 +13,7 @@ export function Footer() {
   return (
     <footer className="text-gray-900 bg-white dark:bg-background-dark flex justify-center items-center h-auto p-4">
       <div className="flex flex-col md:flex-row justify-between items-center w-full max-w-screen-xl">
-        <div className="text-xl md:text-2xl font-bold text-teal-400 mb-4 md:mb-0">
+        <div className="text-xl md:text-2xl font-bold text-blue-900 dark:text-white  mb-4 md:mb-0">
           <span>
             <Link href="/">Code House</Link>
           </span>

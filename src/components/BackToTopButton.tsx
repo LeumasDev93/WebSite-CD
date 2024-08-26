@@ -33,7 +33,7 @@ export function BackToTopButton() {
   return (
     <button
       ref={scrollRef}
-      className={`fixed bottom-4 right-4 p-3 bg-teal-500 hover:bg-teal-400 text-white rounded-full shadow-lg transition-opacity duration-300 ease-in-out ${isActive ? "opacity-100" : "opacity-0"}`}
+      className={`fixed bottom-4 right-4 p-2 hover:bg-blue-950 text-blue-700 rounded-full shadow-lg transition-opacity duration-300 ease-in-out ${isActive ? "opacity-100" : "opacity-0"}`}
       onClick={handleProgressClick}
       aria-label="Voltar ao início"
     >
@@ -61,7 +61,7 @@ export function BackToTopButton() {
           cx="50"
           cy="50"
           r="48"
-          stroke="#00897b"
+          stroke="blue"
           strokeWidth="4"
           fill="none"
           style={{

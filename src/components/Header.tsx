@@ -22,37 +22,34 @@ export function Header() {
   return (
     <header className="bg-white dark:bg-background-dark shadow-md fixed top-0 w-full z-50">
       <div className="px-4 py-5 flex justify-between items-center mx-8 md:mx-10 lg:mx-48">
-        <div className="text-2xl md:text-3xl font-bold text-teal-400">
+        <div className={`text-2xl md:text-3xl font-bold text-blue-900 ${
+                      theme === "dark" ? "text-white" : "text-blue-900"
+                    }`}>
           <Link href="/">Code House</Link>
         </div>
         <nav className="hidden md:flex space-x-8">
-          <Link
-            href="/"
-            className="text-gray-700 dark:text-foreground-dark hover:text-teal-400"
-          >
-            Home
-          </Link>
-          <Link
-            href="#services"
-            className="text-gray-700 dark:text-foreground-dark hover:text-teal-400"
-          >
-            Serviços
-          </Link>
-          <Link
+        <Link
             href="#about"
-            className="text-gray-700 dark:text-foreground-dark hover:text-teal-400"
+            className="text-gray-700 dark:text-foreground-dark hover:text-blue-900"
           >
             Sobre Nós
           </Link>
           <Link
-            href="#contact"
-            className="text-gray-700 dark:text-foreground-dark hover:text-teal-400"
+            href="#services"
+            className="text-gray-700 dark:text-foreground-dark hover:text-blue-900"
           >
-            Contato
+            Serviços
+          </Link>
+         
+          <Link
+            href="#contact"
+            className="text-gray-700 dark:text-foreground-dark hover:text-blue-900"
+          >
+            Contate-nos
           </Link>
           <button
             onClick={toggleTheme}
-            className="ml-4 mb-2 bg-teal-400 text-white px-4 py-2 rounded-full"
+            className="ml-4 mb-2 bg-blue-900 hover:bg-blue-950 text-white px-4 py-2 rounded-full"
           >
             {theme === "light" ? (
               <PiMoonStarsLight className="size-5 font-bold" />
@@ -105,14 +102,14 @@ export function Header() {
                   href="#contact"
                   className="block text-gray-700 dark:text-foreground-dark hover:text-gray-900"
                 >
-                  Contato
+                  Contate-nos
                 </Link>
               </div>
             </div>
             <div>
               <button
                 onClick={toggleTheme}
-                className="ml-4 mb-2 bg-teal-400 text-white px-4 py-2 rounded-full"
+                className="ml-4 mb-2 bg-blue-900 text-white px-4 py-2 rounded-full"
               >
                 {theme === "light" ? (
                   <PiMoonStarsLight className="size-5 font-bold" />

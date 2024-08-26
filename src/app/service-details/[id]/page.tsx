@@ -15,6 +15,7 @@ import Image from "next/image";
 
 import { services } from "@/data/serviceData";
 import Link from "next/link";
+import { Contact } from "@/components/Contact";
 
 export default function ServiceDetail() {
   const { theme } = useContext(ThemeContext);
@@ -48,6 +49,13 @@ export default function ServiceDetail() {
   if (!service) {
     return <div>Carregando...</div>;
   }
+
+  const handleScrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <ThemeProvider>
@@ -93,6 +101,7 @@ export default function ServiceDetail() {
                 {service.details}
               </p>
               <motion.button
+                onClick={handleScrollToContact}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="mt-6 bg-blue-900 text-white font-semibold py-2 px-6 rounded-md shadow hover:bg-blue-950 transition-colors duration-300"
@@ -116,7 +125,7 @@ export default function ServiceDetail() {
           } transition-colors duration-300`}
         >
           <div
-            className={`text-gray-900 flex flex-col justify-center items-center dark:text-white mt-20 p-4 mb-10 ${
+            className={`shadow text-gray-900 flex flex-col justify-center items-center dark:text-white mt-20 p-10 mb-10 ${
               theme === "dark" ? "text-white" : "text-gray-900"
             }`}
           >
@@ -157,6 +166,7 @@ export default function ServiceDetail() {
           </div>
         </section>
       </main>
+      <Contact />
       <Footer />
       <BackToTopButton />
     </ThemeProvider>

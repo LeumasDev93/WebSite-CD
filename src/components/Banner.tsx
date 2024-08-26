@@ -48,7 +48,7 @@ const Banner = () => {
               priority
             />
             <div className="absolute inset-0 flex flex-col justify-center text-white p-20 w-[800px]">
-              <h1 className="text-3xl md:text-5xl font-bold ">
+              <h1 className="text-xl md:text-5xl font-bold ">
                 Simplificamos a tecnologia para amplificar seu sucesso.
               </h1>
             </div>
@@ -64,7 +64,7 @@ const Banner = () => {
               priority
             />
             <div className="absolute inset-0 flex flex-col justify-center text-white p-20 w-[800px]">
-              <h1 className="text-3xl md:text-5xl font-bold ">
+              <h1 className="text-xl md:text-5xl font-bold ">
                 Arquitetos Digitais: Construindo Sonhos em Código.
               </h1>
             </div>
@@ -79,8 +79,8 @@ const Banner = () => {
               objectFit="cover"
               priority
             />
-            <div className="absolute inset-0 flex flex-col justify-center text-white p-20 w-[800px]">
-              <h1 className="text-3xl md:text-5xl font-bold ">
+            <div className="absolute inset-0 flex flex-col justify-center text-white p-20 md:w-[800px]">
+              <h1 className="text-xl md:text-5xl font-bold ">
                 Transformando ideias em produtos digitais.
               </h1>
             </div>
@@ -96,7 +96,7 @@ const Banner = () => {
               priority
             />
             <div className="absolute inset-0 flex flex-col justify-center text-white p-20 w-[800px]">
-              <h1 className="text-3xl md:text-5xl font-bold ">
+              <h1 className="text-xl md:text-5xl font-bold ">
                 Conectamos seu negócio ao futuro digital.
               </h1>
             </div>

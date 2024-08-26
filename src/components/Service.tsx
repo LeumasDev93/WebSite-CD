@@ -20,7 +20,6 @@ export function Service() {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % totalGroups);
     }, 9000);
-
     return () => clearInterval(interval);
   }, [totalGroups]);
 
@@ -32,19 +31,15 @@ export function Service() {
   return (
     <section
       id="services"
-      className={`${
-        theme === "dark" ? "bg-background-dark" : "bg-gray-100"
-      } transition-colors duration-300`}
+      className={`${theme === "dark" ? "bg-background-dark" : "bg-gray-100"} transition-colors duration-300`}
     >
       <div
         className={`shadow text-gray-900 flex flex-col justify-center items-center mt-20 p-10 mb-10 ${
           theme === "dark" ? "text-white" : "text-gray-900"
         }`}
       >
-        <div className="">
-          <h1 className="text-blue-900 text-2xl font-bold">Nossos Serviços</h1>
-        </div>
-        <div className="flex flex-row justify-center space-x-5 mt-8">
+        <h1 className="text-blue-900 text-2xl font-bold">Nossos Serviços</h1>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-8">
           {visibleServices.map((service, index) => (
             <Link href={`/service-details/${service.id}`} key={index}>
               <div
@@ -84,3 +79,4 @@ export function Service() {
     </section>
   );
 }
+

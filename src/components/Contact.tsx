@@ -59,7 +59,7 @@ export function Contact() {
     e.preventDefault();
     if (validateForm()) {
       const countryCode = "+238"; 
-      const phoneNumber = "5267277";
+      const phoneNumber = "9809745";
       const fullPhoneNumber = `${countryCode}${phoneNumber}`; 
       const whatsappMessage = `Nome: ${formData.name}\nEmail: ${formData.email}\nAssunto: ${formData.subject}\nMensagem: ${formData.message}`;
       const encodedMessage = encodeURIComponent(whatsappMessage);
@@ -89,7 +89,7 @@ export function Contact() {
           />
           <div className="bg-white shadow-lg rounded-lg p-6 max-w-md">
             <h2 className="text-center text-blue-900 font-bold text-xl md:text-2xl mb-4">
-              Fale Conosco
+              Fale Connosco
             </h2>
             <form className="space-y-4" onSubmit={handleSubmit}>
               <input

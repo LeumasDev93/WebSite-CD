@@ -43,20 +43,19 @@ export function Service() {
           {visibleServices.map((service, index) => (
             <Link href={`/service-details/${service.id}`} key={index}>
               <div
-                className="w-80 md:w-96 h-[300px] rounded bg-white dark:bg-gray-700 shadow md:shadow-md mb-5 md:mb-0 transition-transform duration-300 transform hover:scale-110 hover:bg-blue-100 dark:hover:bg-blue-700 p-4 flex flex-col items-center"
+                className="w-80 md:w-80 h-[450px] rounded bg-white dark:bg-gray-700 shadow md:shadow-md mb-5 md:mb-0 transition-transform duration-300 transform hover:scale-110 hover:bg-blue-100 dark:hover:bg-blue-700 p-4 flex flex-col items-center"
               >
-                <div className="w-full h-32 mb-4 relative">
+                <div className="w-full h-60 mb-4 relative">
                   <Image
                     src={service.image}
                     alt={service.title}
                     layout="fill"
                     objectFit="cover"
-                    className="rounded-t-lg"
+                    className="rounded"
                   />
                 </div>
-                <div className="text-4xl mb-2">{service.icon}</div>
-                <div className="mt-2 text-center">
-                  <h2 className="text-gray-800 dark:text-white font-semibold">
+                <div className="">
+                  <h2 className="text-blue-900 dark:text-white font-semibold">
                     {service.title}
                   </h2>
                   <p className="mt-2 text-gray-600 dark:text-gray-300">

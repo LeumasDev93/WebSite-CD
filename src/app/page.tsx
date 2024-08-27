@@ -7,6 +7,7 @@ import { Header } from "@/components/Header";
 import { Service } from "@/components/Service";
 import Image from "next/image";
 import { Contact } from "@/components/Contact";
+import { Team } from "@/components/Team";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Banner />
         <About />
         <Service />
+        <Team />
         <Contact />
         <Footer />
         <BackToTopButton />

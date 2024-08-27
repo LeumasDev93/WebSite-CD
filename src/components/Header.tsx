@@ -1,10 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useContext } from "react";
 import { ThemeContext } from "@/context/ThemeContext";
 import { PiMoonStarsLight } from "react-icons/pi";
 import { MdLightMode } from "react-icons/md";
+
+import LogoAzul from "@/assets/images/logoCHouseAzul.png";
+import LogoBranco from "@/assets/images/logoCHouseBranco.png";
 
 interface ThemeContextType {
   theme: string;
@@ -14,6 +18,9 @@ interface ThemeContextType {
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useContext<ThemeContextType>(ThemeContext);
+
+  
+  const logo = theme === "dark" ? LogoBranco : LogoAzul;
 
   const toggleIsOpen = () => {
     setIsOpen(!isOpen);
@@ -25,7 +32,9 @@ export function Header() {
         <div className={`text-2xl md:text-3xl font-bold text-blue-900 ${
                       theme === "dark" ? "text-white" : "text-blue-900"
                     }`}>
-          <Link href="/">Code House</Link>
+          <Link href="/">
+              <Image src={logo} alt="logo" width={150} height={150}/>
+            </Link>
         </div>
         <nav className="hidden md:flex space-x-8">
         <Link

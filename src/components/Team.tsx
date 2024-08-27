@@ -23,7 +23,7 @@ export function Team() {
         <h2 className="text-blue-900 font-bold text-2xl mb-10">
           CONHEÇA NOSSA EQUIPA
         </h2>
-        <div className="grid grid-cols-1 md:flex md:items-center md:justify-center md:space-x-6">
+        <div className="grid grid-cols-1 items-center justify-center md:flex md:items-center md:justify-center md:space-x-6">
           {serviceTeam.map((member, index) => (
             <div
               key={index}
